@@ -8,7 +8,7 @@
 .sub-auther{
     position: absolute;
     width: 25%;
-    height: 500px;
+    height: 550px;
     /* background-color: #fca311; */
     /* background: linear-gradient(45deg,#fca311, #14213d); */
     /* background: linear-gradient(to right, #000000, #14213d); */
@@ -71,8 +71,8 @@ input[type='submit']
 
 .error{
     color: red;
-    padding-top: 40px;
-    padding-left: 90px;
+   padding-left: 100px;
+
 }
 .emailExistMessage{
     color: red;
@@ -108,24 +108,24 @@ input[type='submit']
    
 }
 }
-@media (min-width:  320px) and (max-width: 476px) {
+@media (min-width: 412px) and (max-width: 580px) {
     .auther{
-        width: 450%;
+        width: 100%;
         height: 800px;
         background-color:#c6ac8f;
-        padding-top: 50px;
+       padding: 90px;
     
     }
     .sub-auther{
         position: absolute;
-        width: 130%;
-        height: 500px;
+        width: 85%;
+        height: 550px;
        
     background: #22333b;
     
        margin-top: 70px;
-       left: 360px;
-       padding: 35px;
+       left: 30px;
+       padding: 30px 5px;
      
     }
     h2,h6{

@@ -85,6 +85,7 @@ h3 {
         height: 2200px;
         background-color: #c6ac8f;
       padding-top: 350px;
+     
     }
     
     h1 {
@@ -111,25 +112,26 @@ h3 {
    
    
 }
-@media (min-width:  320px) and (max-width: 476px) {
+@media (min-width: 412px) and (max-width: 580px) {
    
 .hobbies {
-    width: 450%;
-    height: 1900px;
-    background-color: #c6ac8f;
-    padding: 100px;
+    width: 100%;
+    height: 160vh;
+   
+    padding: 10px;
 }
 
 h1 {
     text-align: center;
-    font-size: 2.75rem;
+    font-size: 1.5rem;
     font-family: "Tinos", serif;
     font-weight: 700;
 
 }
 
 p {
-    font-weight: 600;
+    font-weight: 100;
+    font-size: 0px;
 }
 
 .my-hobbies {
@@ -137,16 +139,31 @@ p {
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
-    padding-top: 70px;
+    padding-top: 40px;
     gap: 30px; 
+    margin-top: -20px;
 }
 
 .hobby-container {
     position: relative;
-    width: 700px;
-    height: 500px;
+    width: 300px;
+    height: 250px;
     padding:  0px ;
 }
 
+.hobby {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    opacity: 0.9;
+    transition: opacity 0.5s ease;
+}
+.overlay-text {
+    color: white;
+    font-size: 12px;
+  margin-top: 180px;
+    padding: 20px;
+}
 
 }

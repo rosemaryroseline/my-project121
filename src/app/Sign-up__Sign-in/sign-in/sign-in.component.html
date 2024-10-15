@@ -3,9 +3,19 @@
   <div class="sub-auther">
     <div *ngIf="isSignInMode else signupForm" class="form">
       <h2>Login</h2>
-      <form (ngSubmit)="onSignin()">
-        <input type="email" placeholder="Username or Phone number or email" [(ngModel)]="email" name="email"> <br>
-        <input type="password" [(ngModel)]="password" name="password" placeholder="password"><br>
+      <form [formGroup]="myform" (ngSubmit)="onSignin()">
+        <input type="email" placeholder="Username or Phone number or email" formControlName="email" name="email">
+        <div *ngIf="myform.get('email')?.invalid && myform.get('email')?.touched">
+          <small *ngIf="myform.get('email')?.errors?.['required']"  class="error">Email is required</small>
+          <small *ngIf="myform.get('email')?.errors?.['emailInvalid'] && !myform.get('email')?.errors?.['required']" style="color: red;" class="error">Enter valid email</small>
+
+      </div>
+        <br>
+        <input type="password" formControlName="password" name="password" placeholder="password"><br>
+        <div *ngIf="myform.get('password')?.invalid && myform.get('password')?.touched">
+          <small *ngIf="myform.get('password')?.errors?.['required']"  class="error">Password is required</small><br>
+
+      </div>
         <button type="submit" class="button">Login</button><br><br>
         <a  [routerLink]="['/sign-in/forgot-password']" style="margin-left: 100px;">Forgot Password</a><br>
 
@@ -13,7 +23,7 @@
             {{isSignInMode? 'Sign-up' : 'Sign-in'}}
           </button></h6>
       </form>
-      <div *ngIf="errorMessage" style="color:white;">{{errorMessage}}</div>
+      <div *ngIf="errorMessage" style="color:red;margin-left: 50px;">{{errorMessage}}</div>
 
     </div>
 
@@ -22,15 +32,26 @@
     <ng-template #signupForm>
       <h2>Sign-Up</h2>
       <form [formGroup]="myform" (ngSubmit)="onSignup()">
-        <input type="email" placeholder="Username or Phone number or email" name="email" formControlName="email"
-         
-        ><br>
+        <input type="email" placeholder="Username or Phone number or email" name="email" formControlName="email">
+        <div *ngIf="myform.get('email')?.invalid && myform.get('email')?.touched">
+          <small *ngIf="myform.get('email')?.errors?.['required']"  class="error">Email is required</small><br>
+          <small *ngIf="myform.get('email')?.errors?.['emailInvalid'] && !myform.get('email')?.errors?.['required']" style="color: red;" class="error">enter valid email</small>
+
+      </div>
+        <br>
         <span *ngIf="emailExistMessage" class="emailExistMessage">{{emailExistMessage}}</span>
         <input type="text" placeholder="name" formControlName="name"><br>
+        <div *ngIf="myform.get('name')?.invalid && myform.get('name')?.touched">
+          <small *ngIf="myform.get('name')?.errors?.['required']"  class="error" >Name is required</small><br>
+
+      </div>
         <input type="password" name="password" placeholder="password" formControlName="password"><br>
-       
+        <div *ngIf="myform.get('password')?.invalid && myform.get('password')?.touched">
+          <small *ngIf="myform.get('password')?.errors?.['required']"  class="error">Password is required</small><br>
+
+      </div>
         <button type="submit" class="button">Sign-Up</button>
-        <div *ngIf="errorMessage"  class="error">{{errorMessage}}</div>
+        <div *ngIf="errorMessage"  class="error" style="color:red;margin-left: 50px;">{{errorMessage}}</div>
         <h6>Already have an account? <button class='toggle' (click)="toggleSignInSignUp()">
             {{isSignInMode? 'Sign-up' : 'Sign-in'}}
           </button></h6>

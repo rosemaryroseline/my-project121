@@ -28,7 +28,6 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.7.0",
     "mysql": "^2.18.1",
-    "netlify-cli": "^17.36.4",
     "ngx-owl-carousel-o": "^15.0.1",
     "nodemailer": "^6.9.15",
     "rxjs": "~7.8.0",
@@ -36,7 +35,7 @@
     "zone.js": "~0.12.0"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^15.2.11",
+    "@angular-devkit/build-angular": "~15.2.0",
     "@angular/cli": "~15.2.11",
     "@angular/compiler-cli": "^15.2.0",
     "@types/jasmine": "~4.3.0",
@@ -46,6 +45,36 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
-    "typescript": "~4.9.4"
+    "typescript": "^4.9.5"
+  },
+  "overrides": {
+    "copy-template-dir": {
+      "braces": " 3.0.3"
+    },
+    "@netlify/some-package-name": {
+      "got": "14.4.3"
+    },
+    "cacheable-request": {
+      "http-cache-semantics": " 4.1.1"
+    },
+    "lodash.set": "4.3.2",
+    "lodash.template": "4.5.0",
+    "detective-postcss": {
+      "postcss": "8.4.47"
+    },
+    "static-server": "2.2.1",
+    "node-pre-gyp": {
+      "tar": "7.4.3"
+    },
+    "webpack": "5.95.0",
+    "cpy": {
+      "braces": "3.0.3"
+    },
+    "netlify-cli": {
+      "cookie": "1.0.0"
+    },
+    "download": {
+      "got": "14.4.3"
+    }
   }
 }

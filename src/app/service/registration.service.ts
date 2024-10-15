@@ -25,7 +25,9 @@ return !!localStorage.getItem('token');
   }
   constructor(private http:HttpClient,private route:Router) { }
 
-private baseUrl = 'http://localhost:1275'; 
+  private baseUrl = 'https://first-project-1-f4pw.onrender.com'; 
+
+// private baseUrl = 'http://localhost:1275'; 
 private url = `${this.baseUrl}/api/register`;
 private urllogin = `${this.baseUrl}/api/login`;
 private urlContact = `${this.baseUrl}/api/contact`;

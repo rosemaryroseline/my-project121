@@ -16,7 +16,7 @@ margin-top: 280px;
 
    /* background: linear-gradient(45deg, #000000, #14213d, #fca311); */
    background-color:#c6ac8f;
-   height: 100vh; 
+   height: 120vh; 
   
   }
   h1{
@@ -63,12 +63,9 @@ textarea{
     background-color: transparent;
     color: white;
 }
-/* #button{
-    background-color: #14213d;
-    color: #fca311;
-    padding: 20px;
-    font-size: 1.37rem;
-} */
+.error{
+  padding-left: 60px;
+}
 #button{
     position: relative;
     padding: 30px ;
@@ -135,33 +132,76 @@ margin-top: -70px;
  }
 }
 
-@media (min-width:  320px) and (max-width: 476px) {
+@media (min-width: 412px) and (max-width: 580px) {
   .hero{
     display: flex;
     flex-direction: column;
-width: 1700px;
-  
-  
+width: 100%;
+  padding: 5px 30px;
  
-   height: 150vh; 
-  padding-left: 30px;
+
+   height: 110vh; 
+ 
   }
 
 .form{
-  width: 600px;
-  height: auto;
- margin: 100px;
- 
- margin-left: 220px;
-padding: 80px;
+  width: 350px;
+    height: 500px;
+   margin: 10px;
+
+ padding: 40px;
+ box-shadow: 0 0 30px #0a0908; 
 }
 h2{
   color:#000000;
-  font-size: 4.47rem;
+  font-size: 3.27rem;
  text-align: center;
   font-weight: 700;
-margin-top: -100px;
-margin-left: -270px;
-padding: 20px;
+margin-top: -20px;
+margin-left: -20px;
+padding: 10px;
+}
+
+.sub-class{
+  margin-left: 0px;
+ }
+ h1{
+ 
+  font-size: 2.47rem;
+ 
+  font-weight: 600;
+}
+input[type='text'],
+input[type='email'],
+input[type='password'],
+button[type='submit']{
+    position: relative;
+    width: 250px;
+    height: 10px;
+   padding-top: 25px;
+   padding-bottom: 10px;
+  
+  margin-bottom: 15px;
+  border-radius: 1px;
+  background-color:transparent;
+color: aliceblue;
+
+}
+label{
+    color: #c6ac8f;
+    font-weight: 600;
+}
+textarea{
+    width: 250px;
+    height: 100px;
+    margin-bottom: 15px;
+    border-radius: 1px;
+    background-color: transparent;
+    color: white;
+}
+#button{
+  position: relative;
+  padding: 25px ;
+ 
 }
 }

@@ -27,8 +27,10 @@ export class AppComponent {
 
   loggedOut(){
     this.service.logout();
-    this.route.navigate(['/home']);
+    this.route.navigate(['/sign-in']);
     this.isMenuOpen = false;
   }
- 
+  sideShow(){
+
+  }
 }

@@ -4,6 +4,9 @@
         <!-- <img src="../assets/image/pic2.jpeg" alt="Description of image"> -->
         <form class="form" [formGroup]="valid" (ngSubmit)="onSubmit()">
             <h1>Get In Touch</h1>
+            <div *ngIf="valid.invalid && formSubmitted" style="color: red; text-align: center;">
+                Please fill in all required fields correctly before submitting.
+            </div>
            <label for="">Name<br>
                <input type="text" placeholder="" formControlName="name">
                <div *ngIf="valid.get('name')?.invalid && valid.get('name')?.touched">
@@ -16,7 +19,7 @@
                <input type="email" placeholder="" formControlName="email">
                <div *ngIf="valid.get('email')?.invalid && valid.get('email')?.touched">
                    <small *ngIf="valid.get('email')?.errors?.['required']" style="color: red;">Email is required</small><br>
-                   <small *ngIf="valid.get('email')?.errors?.['emailInvalid'] && !valid.get('Email')?.errors?.['required']" style="color: red;">enter valid email</small>
+                   <small *ngIf="valid.get('email')?.errors?.['emailInvalid'] && !valid.get('email')?.errors?.['required']" style="color: red;">enter valid email</small>
    
                </div>
            </label><br>

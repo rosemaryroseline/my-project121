@@ -4,7 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { register } from '../../service/registration';
 import { Router } from '@angular/router';
 import { Contact } from '../../service/registration';
-import { ContactComponent } from 'src/app/contact/contact.component';
+import { customValidate } from 'src/app/customValidateEmail';
 
 @Component({
   selector: 'app-sign-in',
@@ -16,9 +16,9 @@ export class SignInComponent {
   // isLogedIn:boolean=false
   myform!:FormGroup
   emailExistMessage:string | null=null;
-email=''
-name=''
-password=''
+// email=''
+
+// password=''
  errorMessage: string = '';
 registeredData:any[]=[];
 register:register[]=[]
@@ -27,7 +27,7 @@ constructor(private service:RegistrationService,private fb:FormBuilder,private r
 }
 ngOnInit(){
   this.myform=this.fb.group({
-    email:['',[Validators.required,ContactComponent.customEmailValidator]],
+    email:['',[Validators.required,customValidate.validateEmail]],
     name:['',Validators.required],
     password:['',Validators.required],
    
@@ -37,29 +37,26 @@ toggleSignInSignUp(){
 this.isSignInMode=!this.isSignInMode
 }
 onSignin(){
-console.log('sign in',this.email,this.password)
-const signin={email:this.email,password:this.password}
-this.service.Login(signin).subscribe((res)=>{
-  console.log('login success',res)
-  const userId=res.userId;
-  localStorage.setItem(`token${userId}`,res)
-  this.service.login();
-  this.registeredData.push(this.email,this.password);
-  // this.myform.reset();
-  this.email='';
-  this.password='';
-  this.route.navigate(['/home'])
 
+const signin=this.myform.value;
+console.log(signin,'sussssss')
+this.service.Login(signin).subscribe((res)=>{
+  console.log('login success',res);
+  const userId=res.userId;
+  localStorage.setItem(`token${userId}`,res);
+  this.service.login();
+  this.registeredData.push(this.myform.value);
+  this.myform.reset();
+  this.route.navigate(['/home']);
 },(error)=>{
   if(error.status===404 && error.error.message==='User not found'){
-    this.errorMessage='Invalid email and password';
-
-  }else if(error.status===400 && error.error.message==='Password is Incorrect'){
-    this.errorMessage='wrong password';
-  }else {
-    this.errorMessage='error occured';
-  }
-
+        this.errorMessage='Invalid email and password';
+    
+      }else if(error.status===400 && error.error.message==='Password is Incorrect'){
+        this.errorMessage='wrong password';
+      }else {
+        this.errorMessage='error occured';
+      }
 })
 
 }
