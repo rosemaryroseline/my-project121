@@ -90,12 +90,14 @@ h1{
   }
 }
 
-@media (min-width: 412px) and (max-width: 580px) {
+/* @media (min-width: 412px) and (max-width: 580px) { */
+@media only screen and (max-width: 600px) {
   .image-container {
-   
+    position: relative;
     width: 100%;
-
-    padding-top: 60px;
+    background-color: #eae0d5;
+    z-index: 1;
+    padding-top: 20px;
   }
   
   .image-container img {
@@ -104,12 +106,12 @@ h1{
     display: block;
     z-index: 2; 
     position: relative;
-    max-width: 800px;
+    max-width: none;
   
   }
   h1{
-    font-size: 3.78rem;
-    font-weight: 600;
+    font-size:40px;
+    font-weight: 700;
     color: #eae0d5;
     font-family: "Tinos", serif;
     /* margin-top: 200px;
@@ -119,13 +121,23 @@ h1{
   .overlay-text {
     color: #eae0d5;
     font-size: 5px;
-   padding-left: 120px;
-   padding-top: 300px;
+   padding-left: 60px;
+   padding-top: 220px;
     z-index: 4;
     font-family: "Tinos", serif;
-    max-width: 800px;
+    max-width: none;
   }
   h2{
-    font-size: medium;
+    font-size: 10px;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+   
+  }
+  p{
+    font-size: 5px;
   }
 }

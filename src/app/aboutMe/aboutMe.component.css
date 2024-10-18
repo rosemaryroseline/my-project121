@@ -77,27 +77,26 @@ img {
    
   }
 }
-@media (min-width: 412px) and (max-width: 580px) {
-  .hero{
+@media only screen and (max-width: 600px) {
+  .hero {
     display: flex;
     flex-direction: column;
-   width: 100%;
-   padding:10px;
-
-  padding-top: 30px;
-   height: 160vh; 
-
+    width: 100%;
+    padding: 10px;
+    padding-top: 15px;
+    height: auto;
+ 
   }
-  
+
   img {
     position: relative;
-    top: 10px; 
-    left: 50px; 
-    width: 300px;
-    height: 450px;
-   border-radius: 50%;
-   object-fit:cover;
-  
+    top: 10px;
+    left: 3;
+    width: 100%; 
+    max-width: 250px; 
+    height: auto;
+    border-radius: 50%; 
+    object-fit: cover;
   }
   .sub-class{
     flex:none;
@@ -107,26 +106,20 @@ img {
  
   font-size: 20px;
   font-weight: 400;
- padding:30px 60px;
+ padding:20px 30px;
  text-align: start;
  margin-top: -5px;
+ word-spacing: 0.0rem;
 }
-#button{
- 
-  padding: 10px;
-  border-radius: 15px;
-  color: black;
-  margin-left: 350px;
 
-}
 p{
-  margin-left: 50px;
+  margin-left: 30px;
 }
 #button{
   background: #22333b;
-  padding: 20px 40px;
+  padding: 10px 20px;
   color:#eae0d5;
-  margin-left: 45px;
+  margin-left: 30px;
 }
 
 
