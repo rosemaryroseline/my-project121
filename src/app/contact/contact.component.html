@@ -5,7 +5,7 @@
         <form class="form" [formGroup]="valid" (ngSubmit)="onSubmit()">
             <h1>Get In Touch</h1>
             <div *ngIf="valid.invalid && formSubmitted" style="color: red; text-align: center;">
-                Please fill in all required fields correctly before submitting.
+                Please fill in all required fields!
             </div>
            <label for="">Name<br>
                <input type="text" placeholder="" formControlName="name">
@@ -28,7 +28,7 @@
            </label><br>
            <textarea id="description" name="description" placeholder="" formControlName="message"></textarea>
            <div *ngIf="valid.get('message')?.invalid && valid.get('message')?.touched">
-               <small *ngIf="valid.get('message')?.errors?.['required']" style="color: red;">atleast say hi to rose...before submitting</small>
+               <small *ngIf="valid.get('message')?.errors?.['required']" style="color: red;"><strong>Atleast say hi to rose..!</strong></small>
              
            </div>
            <button type="submit" id="button">Submit</button>

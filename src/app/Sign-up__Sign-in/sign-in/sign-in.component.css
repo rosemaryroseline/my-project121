@@ -1,7 +1,7 @@
 .auther{
     width: 100%;
     height: 800px;
-    background-color:#c6ac8f;
+    background-color:#f4f4f9;
     padding-top: 50px;
 
 }
@@ -12,7 +12,7 @@
     /* background-color: #fca311; */
     /* background: linear-gradient(45deg,#fca311, #14213d); */
     /* background: linear-gradient(to right, #000000, #14213d); */
-background: #22333b;
+    background: linear-gradient(to bottom, #000000, #f4f4f9);
 
    margin-top: 70px;
    left: 560px;
@@ -22,13 +22,18 @@ background: #22333b;
    box-shadow: 0 0 60px #0a0908; 
             overflow: hidden; 
    z-index: 1;
-   border-color:  #22333b;
+   border-color:#0a0908;
 }
-h2,h6{
+h2{
     font-family: "Tinos", serif;
     text-align: center;
-    color:#eae0d5;
+    color:#f4f4f9;
  
+}
+h6{
+    font-family: "Tinos", serif;
+    text-align: center;
+    color:#0a0908;  
 }
 input[type='text'],
 input[type='email'],
@@ -36,35 +41,38 @@ input[type='password'],
 input[type='submit']
 {
     position: relative;
-    width: 250px;
+    width: 300px;
     height: 15px;
     padding: 20px;
-   margin-left: 50px;
+   margin-left: 30px;
   margin-bottom: 30px;
   border-radius: 1px;
-  background-color: transparent;
+  background-color: #f4f4f9;
  
-  color: aliceblue;
+  color: #0a0908;
  
 
 }
 .button{
     position: absolute;
-    margin-left: 50px;
-    padding: 8px 98px;
-    background-color: #eae0d5;
-    color: #22333b;
+    /* margin-left: 50px;
+    padding: 8px 98px; */
+    padding: 10px;
+    margin-left: 30px;
+    width: 300px;
+    background-color: #0a0908;
+    color: #f4f4f9;
 }
 .button:hover{
-    background-color: #c6ac8f ;
-    color:#22333b ;
+    background-color: #f4f4f9 ;
+    color:#0a0908 ;
 }
 .toggle{
     margin-top: 90px;
     padding: 10px 20px;
     background-color: transparent;
     border: none;
-    color:white;
+    color:#0a0908;
     font-size: 1.15rem;
   margin-left: -15px;
 }
@@ -109,53 +117,83 @@ input[type='submit']
 }
 }
 @media only screen and (max-width: 600px) {
+  
     .auther{
         width: 100%;
-        height: 700px;
-        background-color:#c6ac8f;
-       padding: 80px;
+        height: 800px;
+        background-color:#f4f4f9;
+     padding: 50px;
     
     }
     .sub-auther{
         position: absolute;
-        width: 85%;
-        height: 500px;
-       display: flex;
-       align-items: center;
-       justify-content: center;
-    background: #22333b;
+        width: 90%;
+        height: 550px;
+        /* background-color: #fca311; */
+        /* background: linear-gradient(45deg,#fca311, #14213d); */
+        /* background: linear-gradient(to right, #000000, #14213d); */
+        background: linear-gradient(to bottom, #000000, #f4f4f9);
     
        margin-top: 70px;
-       left: 15px;
-       padding: 5px;
-     
+       left: 10px;
+       padding: 20px 0px;
+       border-radius: 10px;
+       border-style:groove;
+       box-shadow: 0 0 60px #0a0908; 
+                overflow: hidden; 
+       z-index: 1;
+       border-color:#0a0908;
     }
-    h2,h6{
+    h2{
         font-family: "Tinos", serif;
         text-align: center;
-        color:#eae0d5;
+        color:#f4f4f9;
      
     }
+    h6{
+        font-family: "Tinos", serif;
+        text-align: center;
+        color:#0a0908;  
+    }
     input[type='text'],
-input[type='email'],
-input[type='password'],
-input[type='submit']
-{
+    input[type='email'],
+    input[type='password'],
+    input[type='submit']
+    {
+        position: relative;
+        width: 250px;
+        height: 15px;
+        padding: 20px;
+       margin-left: 25px;
+      margin-bottom: 30px;
+      border-radius: 1px;
+      background-color: #f4f4f9;
    
-    width: 200px;
-    height: 15px;
-    padding: 20px;
-   margin-left: 20px;
-  margin-bottom: 30px;
-  border-radius: 1px;
- 
-}
-.button{
-    position: absolute;
-    margin-left: 25px;
-    padding: 8px 75px;
-    background-color: #eae0d5;
-    color: #22333b;
-}
-   
+      color: #0a0908;
+     
+    
+    }
+    .button{
+        position: absolute;
+        /* margin-left: 50px;
+        padding: 8px 98px; */
+        padding: 10px;
+        margin-left: 25px;
+        width: 250px;
+        background-color: #0a0908;
+        color: #f4f4f9;
+    }
+    .button:hover{
+        background-color: #f4f4f9 ;
+        color:#0a0908 ;
+    }
+    .toggle{
+        margin-top: 90px;
+        padding: 10px 20px;
+        background-color: transparent;
+        border: none;
+        color:#0a0908;
+        font-size: 1.15rem;
+      margin-left: -15px;
+    }
 }

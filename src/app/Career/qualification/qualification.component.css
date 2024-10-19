@@ -1,13 +1,13 @@
 
 .hobbies {
   width: 100%;
-  padding: 100px;
-  background-color: #c6ac8f;
+  padding:60px 200px;
+  background-color:#f4f4f9;
 }
 
 h1 {
   text-align: center;
-  font-size: 2.75rem;
+
   font-family: "Tinos", serif;
   margin-bottom: 50px;
   font-weight: 700;
@@ -16,7 +16,7 @@ h1 {
 .my-hobbies {
   display: flex;
   flex-direction: column;
-  gap: 50px; 
+  gap: 20px; 
 }
 
 .hobby-container {
@@ -88,7 +88,7 @@ h1 {
 .hobbies {
   width: 100%;
   padding: 60px;
-  background-color: #c6ac8f;
+
 }
 
 h1 {
@@ -100,7 +100,7 @@ h1 {
 }
 h3{
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 800;
 }
 .my-hobbies {
   display: flex;
@@ -110,7 +110,7 @@ h3{
 .overlay-text {
   width: 45%; 
   font-size: 18px;
-  color: black;
+
   padding: 0px;
   font-family: "Tinos", serif;
   text-align: justify;

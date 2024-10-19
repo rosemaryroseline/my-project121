@@ -11,7 +11,7 @@
 
       </div>
         <br>
-        <input type="password" formControlName="password" name="password" placeholder="password"><br>
+        <input type="password" formControlName="password" name="password" placeholder="Password"><br>
         <div *ngIf="myform.get('password')?.invalid && myform.get('password')?.touched">
           <small *ngIf="myform.get('password')?.errors?.['required']"  class="error">Password is required</small><br>
 
@@ -40,19 +40,19 @@
       </div>
         <br>
         <span *ngIf="emailExistMessage" class="emailExistMessage">{{emailExistMessage}}</span>
-        <input type="text" placeholder="name" formControlName="name"><br>
+        <input type="text" placeholder="Name" formControlName="name"><br>
         <div *ngIf="myform.get('name')?.invalid && myform.get('name')?.touched">
           <small *ngIf="myform.get('name')?.errors?.['required']"  class="error" >Name is required</small><br>
 
       </div>
-        <input type="password" name="password" placeholder="password" formControlName="password"><br>
+        <input type="password" name="password" placeholder="Password" formControlName="password"><br>
         <div *ngIf="myform.get('password')?.invalid && myform.get('password')?.touched">
           <small *ngIf="myform.get('password')?.errors?.['required']"  class="error">Password is required</small><br>
 
       </div>
         <button type="submit" class="button">Sign-Up</button>
         <div *ngIf="errorMessage"  class="error" style="color:red;margin-left: 50px;">{{errorMessage}}</div>
-        <h6>Already have an account? <button class='toggle' (click)="toggleSignInSignUp()">
+        <h6>Already have an account? <button  class='toggle' (click)="toggleSignInSignUp()">
             {{isSignInMode? 'Sign-up' : 'Sign-in'}}
           </button></h6>
           
